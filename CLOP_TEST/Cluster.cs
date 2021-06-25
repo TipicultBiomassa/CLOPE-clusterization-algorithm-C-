@@ -41,19 +41,19 @@ namespace CLOP_TEST
         public Dictionary<string, int> GetClusterDictionary()
         {
             //var clusterMap = new MyDictionary();
-            Dictionary<string, int> clusterMap = new Dictionary<string, int>();
+            Dictionary<string, int> dictionary = new Dictionary<string, int>();
 
             foreach (Transaction transaction in cluster_transactions)
             {
                 foreach (string Vasya in transaction.getAllData())
                 {
-                    if (clusterMap.ContainsKey(Vasya))
+                    if (dictionary.ContainsKey(Vasya))
                     {
-                        clusterMap[Vasya] += 1;
+                        dictionary[Vasya] += 1;
                     }
                     else
                     {
-                        clusterMap.Add(Vasya, 1);
+                        dictionary.Add(Vasya, 1);
                     }
                     //clusterMap.Add(new DictionaryItem(Vasya));
                     //Console.WriteLine(Vasya);
@@ -62,7 +62,7 @@ namespace CLOP_TEST
                 
 
             }
-            return clusterMap;
+            return dictionary;
         }
             
     }

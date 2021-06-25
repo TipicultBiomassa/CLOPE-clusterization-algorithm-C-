@@ -16,7 +16,7 @@ namespace CLOP_TEST
             
             Console.OutputEncoding = Encoding.UTF8;
             double r = 7.6;
-            // с 7.7 считает
+            // с 7.7 считает 16 секунд
             foreach(Cluster cluster_ in new Clope().Calculate(new DataImporter("../../data/mushrooms.txt").read(), r))
             {
                 Console.WriteLine("New cluster:");
